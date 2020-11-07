@@ -12,5 +12,5 @@ Node.JS Movie Api
 | /api/movies/genres/:genre | `GET` | Empty | GET a movie. |
 | /api/movies/top10 | `GET` | Empty | Get the top 10 movies. |
 | /api/movies/between/:start_year/:end_year | `GET` | Empty | Movies between two dates. |
-| /api/movies/ratingbetween/:start_rating/:end_rating | `GET` | Empty | Movies between two ratimg. |
+| /api/movies/ratingbetween/:start_rating/:end_rating | `GET` | Empty | Movies between two rating. |
 
