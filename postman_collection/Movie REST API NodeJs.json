@@ -1,0 +1,1337 @@
+{
+	"info": {
+		"_postman_id": "34220ae5-2f72-4f89-9bb1-6f545fbf535d",
+		"name": "Movie REST API NodeJs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List All Movies",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List all movies",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "755"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2f3-PhqA/IXHc81lH/9MMvBgcsP60w8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Nov 2020 09:15:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"genres\": [\n            \"Action, Adventure, Comedy, Fantasy, Sci-Fi, Thriller\"\n        ],\n        \"createdAt\": \"2020-11-06T17:11:38.651Z\",\n        \"_id\": \"5fa583ca0a23d207746ff01c\",\n        \"title\": \"Guardians\",\n        \"imdb_score\": 3.9,\n        \"year\": 2017\n    },\n    {\n        \"genres\": [\n            \"Action, Comedy, Horror, Sci-Fi\"\n        ],\n        \"createdAt\": \"2020-11-06T16:52:48.507Z\",\n        \"_id\": \"5fa57f60104a1303902f3b00\",\n        \"title\": \"The Toxic Avenger\",\n        \"imdb_score\": 6.3,\n        \"category\": \"movie\",\n        \"country\": \"USA\",\n        \"year\": 1984\n    },\n    {\n        \"genres\": [\n            \"Action, Adventure, Comedy, Sci-Fi\"\n        ],\n        \"createdAt\": \"2020-11-06T16:58:09.612Z\",\n        \"_id\": \"5fa580a164da9e08dcca7c73\",\n        \"title\": \"Guardians of the Galaxy\",\n        \"imdb_score\": 8,\n        \"year\": 2014\n    },\n    {\n        \"genres\": [\n            \"dfdfd\"\n        ],\n        \"createdAt\": \"2020-11-06T11:58:47.840Z\",\n        \"_id\": \"5fa53a774e35f523e438182d\",\n        \"title\": \"foos\",\n        \"category\": \"rygf\",\n        \"country\": \"india\",\n        \"year\": 1996,\n        \"imdb_score\": 8.5\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Search Movies By Title",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/movies/search/Guardians",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"search",
+						"Guardians"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Search Movies By Title",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/movies/search/Guardians",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movies",
+								"search",
+								"Guardians"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "190"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"be-RdJtIvyd3np5OADtHKg/6VXN9YI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Nov 2020 09:12:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"genres\": [\n            \"Action, Adventure, Comedy, Fantasy, Sci-Fi, Thriller\"\n        ],\n        \"createdAt\": \"2020-11-06T17:11:38.651Z\",\n        \"_id\": \"5fa583ca0a23d207746ff01c\",\n        \"title\": \"Guardians\",\n        \"imdb_score\": 3.9,\n        \"year\": 2017\n    }\n]"
+				},
+				{
+					"name": "Search Movies By Title",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/movies/search/Guardians",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movies",
+								"search",
+								"Guardians"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "190"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"be-RdJtIvyd3np5OADtHKg/6VXN9YI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Nov 2020 09:12:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"genres\": [\n            \"Action, Adventure, Comedy, Fantasy, Sci-Fi, Thriller\"\n        ],\n        \"createdAt\": \"2020-11-06T17:11:38.651Z\",\n        \"_id\": \"5fa583ca0a23d207746ff01c\",\n        \"title\": \"Guardians\",\n        \"imdb_score\": 3.9,\n        \"year\": 2017\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Update Genres and Rating ",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "imdb_score",
+							"value": "4.5",
+							"type": "text"
+						},
+						{
+							"key": "genres",
+							"value": "Action, Adventure, Comedy, Fantasy, Sci-Fi",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movies/5fa583ca0a23d207746ff01c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"5fa583ca0a23d207746ff01c"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List all movies",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "755"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2f3-PhqA/IXHc81lH/9MMvBgcsP60w8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Nov 2020 09:15:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"genres\": [\n            \"Action, Adventure, Comedy, Fantasy, Sci-Fi, Thriller\"\n        ],\n        \"createdAt\": \"2020-11-06T17:11:38.651Z\",\n        \"_id\": \"5fa583ca0a23d207746ff01c\",\n        \"title\": \"Guardians\",\n        \"imdb_score\": 3.9,\n        \"year\": 2017\n    },\n    {\n        \"genres\": [\n            \"Action, Comedy, Horror, Sci-Fi\"\n        ],\n        \"createdAt\": \"2020-11-06T16:52:48.507Z\",\n        \"_id\": \"5fa57f60104a1303902f3b00\",\n        \"title\": \"The Toxic Avenger\",\n        \"imdb_score\": 6.3,\n        \"category\": \"movie\",\n        \"country\": \"USA\",\n        \"year\": 1984\n    },\n    {\n        \"genres\": [\n            \"Action, Adventure, Comedy, Sci-Fi\"\n        ],\n        \"createdAt\": \"2020-11-06T16:58:09.612Z\",\n        \"_id\": \"5fa580a164da9e08dcca7c73\",\n        \"title\": \"Guardians of the Galaxy\",\n        \"imdb_score\": 8,\n        \"year\": 2014\n    },\n    {\n        \"genres\": [\n            \"dfdfd\"\n        ],\n        \"createdAt\": \"2020-11-06T11:58:47.840Z\",\n        \"_id\": \"5fa53a774e35f523e438182d\",\n        \"title\": \"foos\",\n        \"category\": \"rygf\",\n        \"country\": \"india\",\n        \"year\": 1996,\n        \"imdb_score\": 8.5\n    }\n]"
+				},
+				{
+					"name": "Search Movie By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/movies/5fa583ca0a23d207746ff01c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movies",
+								"5fa583ca0a23d207746ff01c"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "188"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bc-SjtyXL0svdhPdOI9TM1ykMg/CXk\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Nov 2020 09:16:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"genres\": [\n        \"Action, Adventure, Comedy, Fantasy, Sci-Fi, Thriller\"\n    ],\n    \"createdAt\": \"2020-11-06T17:11:38.651Z\",\n    \"_id\": \"5fa583ca0a23d207746ff01c\",\n    \"title\": \"Guardians\",\n    \"imdb_score\": 3.9,\n    \"year\": 2017\n}"
+				}
+			]
+		},
+		{
+			"name": "Search Movie By Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/movies/5fa583ca0a23d207746ff01c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"5fa583ca0a23d207746ff01c"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List all movies",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "755"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2f3-PhqA/IXHc81lH/9MMvBgcsP60w8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Nov 2020 09:15:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"genres\": [\n            \"Action, Adventure, Comedy, Fantasy, Sci-Fi, Thriller\"\n        ],\n        \"createdAt\": \"2020-11-06T17:11:38.651Z\",\n        \"_id\": \"5fa583ca0a23d207746ff01c\",\n        \"title\": \"Guardians\",\n        \"imdb_score\": 3.9,\n        \"year\": 2017\n    },\n    {\n        \"genres\": [\n            \"Action, Comedy, Horror, Sci-Fi\"\n        ],\n        \"createdAt\": \"2020-11-06T16:52:48.507Z\",\n        \"_id\": \"5fa57f60104a1303902f3b00\",\n        \"title\": \"The Toxic Avenger\",\n        \"imdb_score\": 6.3,\n        \"category\": \"movie\",\n        \"country\": \"USA\",\n        \"year\": 1984\n    },\n    {\n        \"genres\": [\n            \"Action, Adventure, Comedy, Sci-Fi\"\n        ],\n        \"createdAt\": \"2020-11-06T16:58:09.612Z\",\n        \"_id\": \"5fa580a164da9e08dcca7c73\",\n        \"title\": \"Guardians of the Galaxy\",\n        \"imdb_score\": 8,\n        \"year\": 2014\n    },\n    {\n        \"genres\": [\n            \"dfdfd\"\n        ],\n        \"createdAt\": \"2020-11-06T11:58:47.840Z\",\n        \"_id\": \"5fa53a774e35f523e438182d\",\n        \"title\": \"foos\",\n        \"category\": \"rygf\",\n        \"country\": \"india\",\n        \"year\": 1996,\n        \"imdb_score\": 8.5\n    }\n]"
+				},
+				{
+					"name": "Search Movie By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/movies/5fa583ca0a23d207746ff01c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movies",
+								"5fa583ca0a23d207746ff01c"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "188"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bc-SjtyXL0svdhPdOI9TM1ykMg/CXk\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Nov 2020 09:16:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"genres\": [\n        \"Action, Adventure, Comedy, Fantasy, Sci-Fi, Thriller\"\n    ],\n    \"createdAt\": \"2020-11-06T17:11:38.651Z\",\n    \"_id\": \"5fa583ca0a23d207746ff01c\",\n    \"title\": \"Guardians\",\n    \"imdb_score\": 3.9,\n    \"year\": 2017\n}"
+				}
+			]
+		},
+		{
+			"name": "Search Movie By Released Year",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/movies/between/2012/2018",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"between",
+						"2012",
+						"2018"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List all movies",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "755"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2f3-PhqA/IXHc81lH/9MMvBgcsP60w8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Nov 2020 09:15:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"genres\": [\n            \"Action, Adventure, Comedy, Fantasy, Sci-Fi, Thriller\"\n        ],\n        \"createdAt\": \"2020-11-06T17:11:38.651Z\",\n        \"_id\": \"5fa583ca0a23d207746ff01c\",\n        \"title\": \"Guardians\",\n        \"imdb_score\": 3.9,\n        \"year\": 2017\n    },\n    {\n        \"genres\": [\n            \"Action, Comedy, Horror, Sci-Fi\"\n        ],\n        \"createdAt\": \"2020-11-06T16:52:48.507Z\",\n        \"_id\": \"5fa57f60104a1303902f3b00\",\n        \"title\": \"The Toxic Avenger\",\n        \"imdb_score\": 6.3,\n        \"category\": \"movie\",\n        \"country\": \"USA\",\n        \"year\": 1984\n    },\n    {\n        \"genres\": [\n            \"Action, Adventure, Comedy, Sci-Fi\"\n        ],\n        \"createdAt\": \"2020-11-06T16:58:09.612Z\",\n        \"_id\": \"5fa580a164da9e08dcca7c73\",\n        \"title\": \"Guardians of the Galaxy\",\n        \"imdb_score\": 8,\n        \"year\": 2014\n    },\n    {\n        \"genres\": [\n            \"dfdfd\"\n        ],\n        \"createdAt\": \"2020-11-06T11:58:47.840Z\",\n        \"_id\": \"5fa53a774e35f523e438182d\",\n        \"title\": \"foos\",\n        \"category\": \"rygf\",\n        \"country\": \"india\",\n        \"year\": 1996,\n        \"imdb_score\": 8.5\n    }\n]"
+				},
+				{
+					"name": "Search Movie By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/movies/5fa583ca0a23d207746ff01c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movies",
+								"5fa583ca0a23d207746ff01c"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "188"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bc-SjtyXL0svdhPdOI9TM1ykMg/CXk\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Nov 2020 09:16:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"genres\": [\n        \"Action, Adventure, Comedy, Fantasy, Sci-Fi, Thriller\"\n    ],\n    \"createdAt\": \"2020-11-06T17:11:38.651Z\",\n    \"_id\": \"5fa583ca0a23d207746ff01c\",\n    \"title\": \"Guardians\",\n    \"imdb_score\": 3.9,\n    \"year\": 2017\n}"
+				}
+			]
+		},
+		{
+			"name": "Search Movie By Particular Released Year",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/movies/between/2014/2014",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"between",
+						"2014",
+						"2014"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Search Movie By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/movies/5fa583ca0a23d207746ff01c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movies",
+								"5fa583ca0a23d207746ff01c"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "188"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bc-SjtyXL0svdhPdOI9TM1ykMg/CXk\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Nov 2020 09:16:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"genres\": [\n        \"Action, Adventure, Comedy, Fantasy, Sci-Fi, Thriller\"\n    ],\n    \"createdAt\": \"2020-11-06T17:11:38.651Z\",\n    \"_id\": \"5fa583ca0a23d207746ff01c\",\n    \"title\": \"Guardians\",\n    \"imdb_score\": 3.9,\n    \"year\": 2017\n}"
+				},
+				{
+					"name": "List all movies",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "755"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2f3-PhqA/IXHc81lH/9MMvBgcsP60w8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Nov 2020 09:15:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"genres\": [\n            \"Action, Adventure, Comedy, Fantasy, Sci-Fi, Thriller\"\n        ],\n        \"createdAt\": \"2020-11-06T17:11:38.651Z\",\n        \"_id\": \"5fa583ca0a23d207746ff01c\",\n        \"title\": \"Guardians\",\n        \"imdb_score\": 3.9,\n        \"year\": 2017\n    },\n    {\n        \"genres\": [\n            \"Action, Comedy, Horror, Sci-Fi\"\n        ],\n        \"createdAt\": \"2020-11-06T16:52:48.507Z\",\n        \"_id\": \"5fa57f60104a1303902f3b00\",\n        \"title\": \"The Toxic Avenger\",\n        \"imdb_score\": 6.3,\n        \"category\": \"movie\",\n        \"country\": \"USA\",\n        \"year\": 1984\n    },\n    {\n        \"genres\": [\n            \"Action, Adventure, Comedy, Sci-Fi\"\n        ],\n        \"createdAt\": \"2020-11-06T16:58:09.612Z\",\n        \"_id\": \"5fa580a164da9e08dcca7c73\",\n        \"title\": \"Guardians of the Galaxy\",\n        \"imdb_score\": 8,\n        \"year\": 2014\n    },\n    {\n        \"genres\": [\n            \"dfdfd\"\n        ],\n        \"createdAt\": \"2020-11-06T11:58:47.840Z\",\n        \"_id\": \"5fa53a774e35f523e438182d\",\n        \"title\": \"foos\",\n        \"category\": \"rygf\",\n        \"country\": \"india\",\n        \"year\": 1996,\n        \"imdb_score\": 8.5\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Search Movie By Rating",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/movies/ratingbetween/3/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"ratingbetween",
+						"3",
+						"7"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List all movies",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "755"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2f3-PhqA/IXHc81lH/9MMvBgcsP60w8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Nov 2020 09:15:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"genres\": [\n            \"Action, Adventure, Comedy, Fantasy, Sci-Fi, Thriller\"\n        ],\n        \"createdAt\": \"2020-11-06T17:11:38.651Z\",\n        \"_id\": \"5fa583ca0a23d207746ff01c\",\n        \"title\": \"Guardians\",\n        \"imdb_score\": 3.9,\n        \"year\": 2017\n    },\n    {\n        \"genres\": [\n            \"Action, Comedy, Horror, Sci-Fi\"\n        ],\n        \"createdAt\": \"2020-11-06T16:52:48.507Z\",\n        \"_id\": \"5fa57f60104a1303902f3b00\",\n        \"title\": \"The Toxic Avenger\",\n        \"imdb_score\": 6.3,\n        \"category\": \"movie\",\n        \"country\": \"USA\",\n        \"year\": 1984\n    },\n    {\n        \"genres\": [\n            \"Action, Adventure, Comedy, Sci-Fi\"\n        ],\n        \"createdAt\": \"2020-11-06T16:58:09.612Z\",\n        \"_id\": \"5fa580a164da9e08dcca7c73\",\n        \"title\": \"Guardians of the Galaxy\",\n        \"imdb_score\": 8,\n        \"year\": 2014\n    },\n    {\n        \"genres\": [\n            \"dfdfd\"\n        ],\n        \"createdAt\": \"2020-11-06T11:58:47.840Z\",\n        \"_id\": \"5fa53a774e35f523e438182d\",\n        \"title\": \"foos\",\n        \"category\": \"rygf\",\n        \"country\": \"india\",\n        \"year\": 1996,\n        \"imdb_score\": 8.5\n    }\n]"
+				},
+				{
+					"name": "Search Movie By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/movies/5fa583ca0a23d207746ff01c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movies",
+								"5fa583ca0a23d207746ff01c"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "188"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bc-SjtyXL0svdhPdOI9TM1ykMg/CXk\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Nov 2020 09:16:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"genres\": [\n        \"Action, Adventure, Comedy, Fantasy, Sci-Fi, Thriller\"\n    ],\n    \"createdAt\": \"2020-11-06T17:11:38.651Z\",\n    \"_id\": \"5fa583ca0a23d207746ff01c\",\n    \"title\": \"Guardians\",\n    \"imdb_score\": 3.9,\n    \"year\": 2017\n}"
+				}
+			]
+		},
+		{
+			"name": "Search Movie By Genres",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/movies/genres/Comedy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"genres",
+						"Comedy"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Search Movie By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/movies/5fa583ca0a23d207746ff01c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movies",
+								"5fa583ca0a23d207746ff01c"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "188"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bc-SjtyXL0svdhPdOI9TM1ykMg/CXk\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Nov 2020 09:16:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"genres\": [\n        \"Action, Adventure, Comedy, Fantasy, Sci-Fi, Thriller\"\n    ],\n    \"createdAt\": \"2020-11-06T17:11:38.651Z\",\n    \"_id\": \"5fa583ca0a23d207746ff01c\",\n    \"title\": \"Guardians\",\n    \"imdb_score\": 3.9,\n    \"year\": 2017\n}"
+				},
+				{
+					"name": "List all movies",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "755"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2f3-PhqA/IXHc81lH/9MMvBgcsP60w8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Nov 2020 09:15:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"genres\": [\n            \"Action, Adventure, Comedy, Fantasy, Sci-Fi, Thriller\"\n        ],\n        \"createdAt\": \"2020-11-06T17:11:38.651Z\",\n        \"_id\": \"5fa583ca0a23d207746ff01c\",\n        \"title\": \"Guardians\",\n        \"imdb_score\": 3.9,\n        \"year\": 2017\n    },\n    {\n        \"genres\": [\n            \"Action, Comedy, Horror, Sci-Fi\"\n        ],\n        \"createdAt\": \"2020-11-06T16:52:48.507Z\",\n        \"_id\": \"5fa57f60104a1303902f3b00\",\n        \"title\": \"The Toxic Avenger\",\n        \"imdb_score\": 6.3,\n        \"category\": \"movie\",\n        \"country\": \"USA\",\n        \"year\": 1984\n    },\n    {\n        \"genres\": [\n            \"Action, Adventure, Comedy, Sci-Fi\"\n        ],\n        \"createdAt\": \"2020-11-06T16:58:09.612Z\",\n        \"_id\": \"5fa580a164da9e08dcca7c73\",\n        \"title\": \"Guardians of the Galaxy\",\n        \"imdb_score\": 8,\n        \"year\": 2014\n    },\n    {\n        \"genres\": [\n            \"dfdfd\"\n        ],\n        \"createdAt\": \"2020-11-06T11:58:47.840Z\",\n        \"_id\": \"5fa53a774e35f523e438182d\",\n        \"title\": \"foos\",\n        \"category\": \"rygf\",\n        \"country\": \"india\",\n        \"year\": 1996,\n        \"imdb_score\": 8.5\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "List Top 10",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/movies/top10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"top10"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Search Movie By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/movies/5fa583ca0a23d207746ff01c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movies",
+								"5fa583ca0a23d207746ff01c"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "188"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bc-SjtyXL0svdhPdOI9TM1ykMg/CXk\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Nov 2020 09:16:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"genres\": [\n        \"Action, Adventure, Comedy, Fantasy, Sci-Fi, Thriller\"\n    ],\n    \"createdAt\": \"2020-11-06T17:11:38.651Z\",\n    \"_id\": \"5fa583ca0a23d207746ff01c\",\n    \"title\": \"Guardians\",\n    \"imdb_score\": 3.9,\n    \"year\": 2017\n}"
+				},
+				{
+					"name": "List all movies",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY0NzQ0NzQ4LCJleHAiOjE1NjQ3NTE5NDh9.gE2DjhWgNmPFyy7K21MEC4bIm3gbbDicdE_eorFIZ0o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "755"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2f3-PhqA/IXHc81lH/9MMvBgcsP60w8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Nov 2020 09:15:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"genres\": [\n            \"Action, Adventure, Comedy, Fantasy, Sci-Fi, Thriller\"\n        ],\n        \"createdAt\": \"2020-11-06T17:11:38.651Z\",\n        \"_id\": \"5fa583ca0a23d207746ff01c\",\n        \"title\": \"Guardians\",\n        \"imdb_score\": 3.9,\n        \"year\": 2017\n    },\n    {\n        \"genres\": [\n            \"Action, Comedy, Horror, Sci-Fi\"\n        ],\n        \"createdAt\": \"2020-11-06T16:52:48.507Z\",\n        \"_id\": \"5fa57f60104a1303902f3b00\",\n        \"title\": \"The Toxic Avenger\",\n        \"imdb_score\": 6.3,\n        \"category\": \"movie\",\n        \"country\": \"USA\",\n        \"year\": 1984\n    },\n    {\n        \"genres\": [\n            \"Action, Adventure, Comedy, Sci-Fi\"\n        ],\n        \"createdAt\": \"2020-11-06T16:58:09.612Z\",\n        \"_id\": \"5fa580a164da9e08dcca7c73\",\n        \"title\": \"Guardians of the Galaxy\",\n        \"imdb_score\": 8,\n        \"year\": 2014\n    },\n    {\n        \"genres\": [\n            \"dfdfd\"\n        ],\n        \"createdAt\": \"2020-11-06T11:58:47.840Z\",\n        \"_id\": \"5fa53a774e35f523e438182d\",\n        \"title\": \"foos\",\n        \"category\": \"rygf\",\n        \"country\": \"india\",\n        \"year\": 1996,\n        \"imdb_score\": 8.5\n    }\n]"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "f6a18ece-998d-43e7-b159-6ace03043028",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "16337faf-b2a9-4ffc-a5e1-e6b56e045ba1",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
