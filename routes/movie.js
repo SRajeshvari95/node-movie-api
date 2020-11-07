@@ -9,11 +9,12 @@ const Movie = require('../models/Movie');
 router.get('/',(req,res)=>{
   const promise = Movie.find({ }).sort({imdb_score: 1}); 
   promise.then((data)=> {
-    res.json(data);
-//    res.send({status:'sucess',data:data});
+    // res.json(data);
+   res.send({status:'sucess',data:data});
 
   }).catch((err)=> {
-    res.json(err);
+    // res.json(err);
+    res.send({status:'error',message:err});
   })
 });
 
@@ -21,9 +22,11 @@ router.get('/',(req,res)=>{
 router.get('/top10',(req,res)=>{
   const promise = Movie.find({ }).limit(10).sort({imdb_score: 1}); // bütün filmlerin listelenmesi
   promise.then((data)=> {
-    res.json(data);
+   res.send({status:'sucess',data:data});
+  //  res.json(data);
   }).catch((err)=> {
-    res.json(err);
+    res.send({status:'error',message:err});
+    // res.json(err);
   })
 });
 
@@ -33,9 +36,12 @@ router.get('/:movie_id',(req,res,next)=>{
    promise.then((movie)=>{
      if(!movie)
      next({message: 'The movie was not found'});
-     res.json(movie);
-   }).catch((err)=> {
-     res.json(err);
+     
+     res.send({status:'sucess',data:movie});
+  //  res.json(movie);
+  }).catch((err)=> {
+    res.send({status:'error',message:"The movie was not found"});
+    // res.json(err);
    });
 });
 
@@ -49,9 +55,12 @@ router.put('/:movie_id',(req,res,next)=>{
    promise.then((movie)=>{
      if(!movie)
      next({message: 'The movie was not found'});
-     res.json(movie);
-   }).catch((err)=> {
-     res.json(err);
+
+     res.send({status:'sucess',data:movie});
+     //  res.json(movie);
+     }).catch((err)=> {
+       res.send({status:'error',message:"The movie was not found"});
+       // res.json(err);
    });
 });
 
@@ -66,9 +75,11 @@ router.get('/between/:start_year/:end_year',(req,res)=>{
     }
   );
   promise.then((data)=> {
-    res.json(data);
-  }).catch((err)=> {
-    res.json(err);
+    res.send({status:'sucess',data:data});
+    //  res.json(data);
+    }).catch((err)=> {
+      res.send({status:'error',message:err});
+      // res.json(err);
   })
 });
 
@@ -82,9 +93,11 @@ router.get('/ratingbetween/:start_rating/:end_rating',(req,res)=>{
     }
   );
   promise.then((data)=> {
-    res.json(data);
-  }).catch((err)=> {
-    res.json(err);
+    res.send({status:'sucess',data:data});
+    //  res.json(data);
+    }).catch((err)=> {
+      res.send({status:'error',message:err});
+      // res.json(err);
   })
 });
 
@@ -98,9 +111,11 @@ router.get('/genres/:genre',(req,res)=>{
     }
   );
   promise.then((data)=> {
-    res.json(data);
+    res.send({status:'sucess',data:data});
+  //  res.json(data);
   }).catch((err)=> {
-    res.json(err);
+    res.send({status:'error',message:err});
+    // res.json(err);
   })
 });
 
@@ -130,20 +145,27 @@ router.get('/search/:name',(req,res)=>{
 
         const promise = movie.save();
         promise.then((data)=>{
-            res.json(data);
-        }).catch((err)=>{
-          res.json(err);
+          res.send({status:'sucess',data:data});
+          //  res.json(data);
+          }).catch((err)=> {
+            res.send({status:'error',message:"The movie was not found"});
+            // res.json(err);
         });
 
-      }).catch(console.log);
+      }).catch((err)=> {
+        res.send({status:'error',message:"The movie was not found"});
+        // res.json(err);
+    });
     }
     else{
-      res.json(data);
+      res.send({status:'sucess',data:data});
+      //  res.json(data);
     }
     //res.json(data);
     
   }).catch((err)=> {
-    res.json(err);
+    res.send({status:'error',message:"The movie was not found"});
+    // res.json(err);
   })
 });
 
