@@ -10,6 +10,8 @@ router.get('/',(req,res)=>{
   const promise = Movie.find({ }).sort({imdb_score: 1}); 
   promise.then((data)=> {
     res.json(data);
+//    res.send({status:'sucess',data:data});
+
   }).catch((err)=> {
     res.json(err);
   })
